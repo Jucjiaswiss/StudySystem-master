@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+
+        android:id="@+id/rl_option_top"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/card_background">
+
+        <TextView
+
+            android:id="@+id/learn_selector_classify"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8dp"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/classify"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/learn_selector_classify_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/learn_selector_classify"
+            android:src="@drawable/img_triangle_right_gray" />
+
+        <ImageView
+            android:alpha="0.4"
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/learn_selector_classify_icon"
+            android:background="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/learn_selector_major"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@id/line"
+            android:gravity="center"
+            android:text="@string/major"
+            android:textSize="15sp" />
+
+
+
+        <ImageView
+            android:alpha="0.4"
+            android:id="@+id/line2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/learn_selector_major"
+            android:background="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/learn_selector_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/line2"
+            android:gravity="center"
+            android:text="@string/subject"
+            android:textSize="14sp"
+            />
+
+
+        <RadioGroup
+            android:id="@+id/learn_selector_order_radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/learn_selector_ranktime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:text="@string/rank_time"
+                android:textColor="@drawable/color_radiobutton"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/learn_selector_rankpopular"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="7dp"
+                android:background="@null"
+                android:button="@null"
+                android:text="@string/rank_popular"
+                android:textColor="@drawable/color_radiobutton"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/learn_selector_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_option_top"
+        android:background="@color/comm_gray"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RadioGroup
+                android:id="@+id/learn_selector_allmajor_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+            </RadioGroup>
+        </ScrollView>
+
+        <ListView
+            android:padding="3dp"
+            android:id="@+id/learn_selector_allsubject_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/comm_gray"
+            android:scrollbars="none"></ListView>
+    </LinearLayout>
+
+</RelativeLayout>

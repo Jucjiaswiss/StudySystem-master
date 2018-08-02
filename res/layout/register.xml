@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg2">
+    <EditText
+        android:id="@+id/regi_name"
+        android:hint="Your name"
+        android:layout_marginTop="220dp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/bg_edittext_selector"
+        android:textColorHint="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:textCursorDrawable="@drawable/cursor"
+        android:paddingLeft="5dp"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/regi_pwd"
+        android:hint="Password"
+        android:textColor="@color/colorWhite"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/regi_name"
+        android:background="@drawable/bg_edittext_selector"
+        android:textColorHint="@color/colorWhite"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="50dp"
+        android:textCursorDrawable="@drawable/cursor"
+        />
+
+    <Button
+        android:id="@+id/regi_btn"
+        android:text="注册"
+        android:textColor="@color/actionbar_color"
+        android:onClick="register"
+        android:layout_below="@+id/regi_pwd"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_loginbtn_selector"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="45dp" />
+
+
+</RelativeLayout>
